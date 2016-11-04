@@ -99,19 +99,6 @@ def _split_data_sets(features, labels):
                           )
     write_pool = Pool(6)
     write_pool.map(_writer, data_file_mappings)
-    
-    print ("Writing training features to disk")
-    hickle.dump(train_features, open('train_features.hkl', 'w'))
-    print ("Writing training labels to disk")
-    hickle.dump(train_labels, open('train_labels.hkl', 'w'))
-    print ("Writing validation features to disk")
-    hickle.dump(valid_features, open('valid_features.hkl', 'w'))
-    print ("Writing validation labels to disk")
-    hickle.dump(valid_labels, open('valid_labels.hkl', 'w'))
-    print ("Writing test features to disk")
-    hickle.dump(test_features, open('test_features.hkl', 'w'))
-    print ("Writing test labels to disk")
-    hickle.dump(test_labels, open('test_labels.hkl', 'w'))
 
 
 def _writer(mapping):
