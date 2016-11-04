@@ -57,7 +57,7 @@ def build_and_test_model(datasets):
         if _compare(predictions[index], datasets.test_labels[index]):
             match_count += 1
 
-    print ("Accuracy is : {}".format(str(match_count / len(predictions))))
+    print ("Accuracy is : {} %".format(str(match_count / len(predictions) * 100)))
 
 
 def _compare(prediction_vector, label_vector):
